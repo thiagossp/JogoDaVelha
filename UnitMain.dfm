@@ -1,9 +1,10 @@
 object FormMain: TFormMain
   Left = 0
   Top = 0
+  ActiveControl = Button00
   Caption = 'FormMain'
-  ClientHeight = 299
-  ClientWidth = 635
+  ClientHeight = 615
+  ClientWidth = 615
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,6 +12,180 @@ object FormMain: TFormMain
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
+  object Panel1: TPanel
+    Left = 8
+    Top = 8
+    Width = 600
+    Height = 600
+    TabOrder = 0
+    object Button00: TButton
+      Left = 10
+      Top = 7
+      Width = 180
+      Height = 180
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -107
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+      OnClick = Button00Click
+    end
+    object Panel2: TPanel
+      Left = 196
+      Top = -1
+      Width = 10
+      Height = 601
+      Caption = 'Panel2'
+      Color = clBlack
+      ParentBackground = False
+      TabOrder = 1
+    end
+    object Panel3: TPanel
+      Left = 398
+      Top = -1
+      Width = 9
+      Height = 601
+      Caption = 'Panel2'
+      Color = clBlack
+      ParentBackground = False
+      TabOrder = 2
+    end
+    object Panel4: TPanel
+      Left = 0
+      Top = 192
+      Width = 601
+      Height = 10
+      Caption = 'Panel2'
+      Color = clBlack
+      ParentBackground = False
+      TabOrder = 3
+    end
+    object Panel5: TPanel
+      Left = 0
+      Top = 394
+      Width = 601
+      Height = 10
+      Caption = 'Panel2'
+      Color = clBlack
+      ParentBackground = False
+      TabOrder = 4
+    end
+    object Button01: TButton
+      Left = 212
+      Top = 7
+      Width = 180
+      Height = 180
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -107
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 5
+      OnClick = Button01Click
+    end
+    object Button02: TButton
+      Left = 413
+      Top = 7
+      Width = 180
+      Height = 180
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -107
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 6
+      OnClick = Button02Click
+    end
+    object Button11: TButton
+      Left = 212
+      Top = 208
+      Width = 180
+      Height = 180
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -107
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 7
+      OnClick = Button11Click
+    end
+    object Button21: TButton
+      Left = 212
+      Top = 410
+      Width = 180
+      Height = 180
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -107
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 8
+      OnClick = Button21Click
+    end
+    object Button10: TButton
+      Left = 10
+      Top = 208
+      Width = 180
+      Height = 180
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -107
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 9
+      OnClick = Button10Click
+    end
+    object Button20: TButton
+      Left = 10
+      Top = 410
+      Width = 180
+      Height = 180
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -107
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 10
+      OnClick = Button20Click
+    end
+    object Button12: TButton
+      Left = 413
+      Top = 211
+      Width = 180
+      Height = 180
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -107
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 11
+      OnClick = Button12Click
+    end
+    object Button22: TButton
+      Left = 413
+      Top = 410
+      Width = 180
+      Height = 180
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -107
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 12
+      OnClick = Button22Click
+    end
+  end
 end
