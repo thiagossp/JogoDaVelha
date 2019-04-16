@@ -1,7 +1,7 @@
 object FormMain: TFormMain
   Left = 0
   Top = 0
-  ActiveControl = Button00
+  ActiveControl = Button_1
   Caption = 'FormMain'
   ClientHeight = 615
   ClientWidth = 615
@@ -21,7 +21,7 @@ object FormMain: TFormMain
     Width = 600
     Height = 600
     TabOrder = 0
-    object Button00: TButton
+    object Button_1: TButton
       Left = 10
       Top = 7
       Width = 180
@@ -33,7 +33,7 @@ object FormMain: TFormMain
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 0
-      OnClick = Button00Click
+      OnClick = Button_1Click
     end
     object Panel2: TPanel
       Left = 196
@@ -75,7 +75,7 @@ object FormMain: TFormMain
       ParentBackground = False
       TabOrder = 4
     end
-    object Button01: TButton
+    object Button_2: TButton
       Left = 212
       Top = 7
       Width = 180
@@ -87,9 +87,9 @@ object FormMain: TFormMain
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 5
-      OnClick = Button01Click
+      OnClick = Button_2Click
     end
-    object Button02: TButton
+    object Button_3: TButton
       Left = 413
       Top = 7
       Width = 180
@@ -101,9 +101,9 @@ object FormMain: TFormMain
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 6
-      OnClick = Button02Click
+      OnClick = Button_3Click
     end
-    object Button11: TButton
+    object Button_5: TButton
       Left = 212
       Top = 208
       Width = 180
@@ -115,9 +115,9 @@ object FormMain: TFormMain
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 7
-      OnClick = Button11Click
+      OnClick = Button_5Click
     end
-    object Button21: TButton
+    object Button_8: TButton
       Left = 212
       Top = 410
       Width = 180
@@ -129,9 +129,9 @@ object FormMain: TFormMain
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 8
-      OnClick = Button21Click
+      OnClick = Button_8Click
     end
-    object Button10: TButton
+    object Button_4: TButton
       Left = 10
       Top = 208
       Width = 180
@@ -143,9 +143,9 @@ object FormMain: TFormMain
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 9
-      OnClick = Button10Click
+      OnClick = Button_4Click
     end
-    object Button20: TButton
+    object Button_7: TButton
       Left = 10
       Top = 410
       Width = 180
@@ -157,9 +157,9 @@ object FormMain: TFormMain
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 10
-      OnClick = Button20Click
+      OnClick = Button_7Click
     end
-    object Button12: TButton
+    object Button_6: TButton
       Left = 413
       Top = 211
       Width = 180
@@ -171,9 +171,9 @@ object FormMain: TFormMain
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 11
-      OnClick = Button12Click
+      OnClick = Button_6Click
     end
-    object Button22: TButton
+    object Button_9: TButton
       Left = 413
       Top = 410
       Width = 180
@@ -185,7 +185,7 @@ object FormMain: TFormMain
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 12
-      OnClick = Button22Click
+      OnClick = Button_9Click
     end
   end
 end
