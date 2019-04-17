@@ -47,7 +47,7 @@ var
   Movements: SmallInt;
 
 procedure StartGame();
-procedure MachinePlay();
+procedure BotPlayer();
 function CheckMove(Button: TObject; i: Integer): Bool;
 function CheckWinner(): Bool;
 
@@ -106,7 +106,7 @@ begin
   for I := 1 to 9 do Board[I] := ' ';
 
   if Random(100) mod 2 = 0 then Player := 'X' else Player := 'O';
-  if Player = 'O' then MachinePlay();
+  if Player = 'O' then BotPlayer();
 
 end;
 
@@ -123,7 +123,7 @@ begin
     else
     begin
       if Player = 'X' then Player := 'O' else Player := 'X';
-      if Player = 'O' then MachinePlay();
+      if Player = 'O' then BotPlayer();
     end;
 
     Result := True;
@@ -166,7 +166,7 @@ begin
 
 end;
 
-procedure MachinePlay();
+procedure BotPlayer();
 var
   I, J, Score, RandomPlay: integer;
   ButtonName : String;

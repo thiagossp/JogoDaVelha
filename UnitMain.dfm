@@ -2,10 +2,12 @@ object FormMain: TFormMain
   Left = 0
   Top = 0
   ActiveControl = Button_1
-  Caption = 'FormMain'
-  ClientHeight = 615
-  ClientWidth = 615
-  Color = clBtnFace
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'Tic-Tac-Toe'
+  ClientHeight = 616
+  ClientWidth = 616
+  Color = clBlack
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -20,6 +22,8 @@ object FormMain: TFormMain
     Top = 8
     Width = 600
     Height = 600
+    Color = clWindow
+    ParentBackground = False
     TabOrder = 0
     object Button_1: TButton
       Left = 10
@@ -27,7 +31,7 @@ object FormMain: TFormMain
       Width = 180
       Height = 180
       Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
+      Font.Color = clWindow
       Font.Height = -107
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
@@ -81,7 +85,7 @@ object FormMain: TFormMain
       Width = 180
       Height = 180
       Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
+      Font.Color = clWindow
       Font.Height = -107
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
@@ -95,7 +99,7 @@ object FormMain: TFormMain
       Width = 180
       Height = 180
       Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
+      Font.Color = clWindow
       Font.Height = -107
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
@@ -109,7 +113,7 @@ object FormMain: TFormMain
       Width = 180
       Height = 180
       Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
+      Font.Color = clWindow
       Font.Height = -107
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
@@ -123,7 +127,7 @@ object FormMain: TFormMain
       Width = 180
       Height = 180
       Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
+      Font.Color = clWindow
       Font.Height = -107
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
@@ -137,7 +141,7 @@ object FormMain: TFormMain
       Width = 180
       Height = 180
       Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
+      Font.Color = clWindow
       Font.Height = -107
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
@@ -151,7 +155,7 @@ object FormMain: TFormMain
       Width = 180
       Height = 180
       Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
+      Font.Color = clWindow
       Font.Height = -107
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
@@ -165,7 +169,7 @@ object FormMain: TFormMain
       Width = 180
       Height = 180
       Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
+      Font.Color = clWindow
       Font.Height = -107
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
@@ -179,7 +183,7 @@ object FormMain: TFormMain
       Width = 180
       Height = 180
       Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
+      Font.Color = clWindow
       Font.Height = -107
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
