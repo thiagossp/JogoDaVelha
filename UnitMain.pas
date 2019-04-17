@@ -49,7 +49,7 @@ var
 procedure StartGame();
 procedure MachinePlay();
 function CheckMove(Button: TObject; i: Integer): Bool;
-procedure CheckWinner();
+function CheckWinner(): Bool;
 
 implementation
 
@@ -103,10 +103,10 @@ begin
   WinningSequences[8][2] := 5;
   WinningSequences[8][3] := 7;
 
-  if Random(100) mod 2 = 0 then Player := 'X' else Player := 'O';
+  for I := 1 to 9 do Board[I] := ' ';
 
-  for I := 1 to 9 do
-    Board[I] := ' ';
+  if Random(100) mod 2 = 0 then Player := 'X' else Player := 'O';
+  if Player = 'O' then MachinePlay();
 
 end;
 
@@ -116,12 +116,24 @@ begin
   begin
     TButton(Button).Caption := Player;
     Board[I] := Player;
-    CheckWinner();
-    if Player = 'X' then Player := 'O' else Player := 'X'
-  end;
+    if CheckWinner = True then
+    begin
+      StartGame();
+    end
+    else
+    begin
+      if Player = 'X' then Player := 'O' else Player := 'X';
+      if Player = 'O' then MachinePlay();
+    end;
+
+    Result := True;
+  end
+  else
+    Result := False;
+
 end;
 
-procedure CheckWinner();
+function CheckWinner(): Bool;
 var
   I: integer;
 begin
@@ -132,28 +144,85 @@ begin
        (Board[WinningSequences[I][3]] = Player) then
        begin
            ShowMessage('O "' + Player + '" ganhou!');
-           StartGame();
-           break;
+           Result := True;
+           exit;
        end;
   end;
 
   for I := 1 to 9 do
   begin
     if Board[I] = ' ' then
-      break
+    begin
+      Result := False;
+      exit;
+    end
     else
     if I = 9 then
     begin
       ShowMessage('A velha venceu!');
-      StartGame();
+      Result := True;
     end;
   end;
 
 end;
 
 procedure MachinePlay();
+var
+  I, J, Score, RandomPlay: integer;
+  ButtonName : String;
+  ButtonObjetct : TObject;
+  Played : Bool;
 begin
+  sleep(300);
 
+  //check if is possible win
+  for I := 1 to 8 do
+  begin
+    Score := 0;
+    if (Board[WinningSequences[I][1]] = Player) then Score := Score + 1;
+    if (Board[WinningSequences[I][2]] = Player) then Score := Score + 1;
+    if (Board[WinningSequences[I][3]] = Player) then Score := Score + 1;
+    if Score = 2 then
+      for J := 1 to 3 do
+        if (Board[WinningSequences[I][J]] = ' ') then
+        begin
+          ButtonName := 'Button_' + IntToStr(WinningSequences[I][J]);
+          ButtonObjetct := FormMain.FindComponent(ButtonName);
+          CheckMove(ButtonObjetct, WinningSequences[I][J]);
+          Exit;
+        end;
+  end;
+
+  //check if is possible loss
+  for I := 1 to 8 do
+  begin
+    Score := 0;
+    if (Board[WinningSequences[I][1]] = 'X') then Score := Score + 1;
+    if (Board[WinningSequences[I][2]] = 'X') then Score := Score + 1;
+    if (Board[WinningSequences[I][3]] = 'X') then Score := Score + 1;
+    if Score = 2 then
+      for J := 1 to 3 do
+        if (Board[WinningSequences[I][J]] = ' ') then
+        begin
+          ButtonName := 'Button_' + IntToStr(WinningSequences[I][J]);
+          ButtonObjetct := FormMain.FindComponent(ButtonName);
+          CheckMove(ButtonObjetct, WinningSequences[I][J]);
+          Exit;
+        end;
+  end;
+
+  //random play
+  while 1 = 1 do
+  begin
+    RandomPlay := Random(8) + 1;
+    if (Board[RandomPlay] = ' ') then
+    begin
+      ButtonName := 'Button_' + IntToStr(RandomPlay);
+      ButtonObjetct := FormMain.FindComponent(ButtonName);
+      CheckMove(ButtonObjetct, RandomPlay);
+      Exit;
+    end;
+  end;
 end;
 
 procedure TFormMain.Button_1Click(Sender: TObject);
